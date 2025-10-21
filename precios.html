@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cangry Snack - Precios</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@600&display=swap');
+    body { font-family:'Baloo 2',cursive; margin:0; background:linear-gradient(to bottom,#fff8dc,#fef9e7); color:#3e2c00;}
+    header { background:linear-gradient(135deg,#ffd700,#ffb400); color:#003366; padding:40px 20px; text-align:center;}
+    nav { background:#3e2c00; padding:15px; display:flex; justify-content:center; gap:30px;}
+    nav a { color:white; text-decoration:none; font-weight:bold; padding:10px 15px; border-radius:10px; transition:0.3s;}
+    nav a:hover { background:#ffd700; color:#003366; transform:scale(1.1);}
+    h2 { text-align:center; color:#003366; margin:30px 0;}
+    .productos { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; padding:20px;}
+    .producto { background:#fff; border:3px solid #ffd700; border-radius:15px; padding:15px; text-align:center; box-shadow:0 6px 12px rgba(0,0,0,0.15); transition:0.3s;}
+    .producto img { width:100%; height:160px; object-fit:cover; border-radius:12px;}
+    .producto:hover { transform:translateY(-5px) scale(1.03);}
+    footer { background:linear-gradient(135deg,#003366,#002244); color:white; text-align:center; padding:20px; margin-top:40px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍟 Menú de Precios</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="precios.html">Precios</a>
+    <a href="mision.html">Misión y Visión</a>
+    <a href="redes.html">Redes</a>
+  </nav>
+
+  <h2>✨ Nuestros productos ✨</h2>
+  <section class="productos">
+    <div class="producto">
+      <img src="https://cdn.pixabay.com/photo/2017/01/22/19/20/burger-2008181_640.jpg" alt="Mini Hamburguesa">
+      <h3>Mini Hamburguesas</h3>
+      <p>$4.000</p>
+    </div>
+    <div class="producto">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hot-dog-1238713_640.jpg" alt="Mini Perros">
+      <h3>Mini Perros</h3>
+      <p>$3.500</p>
+    </div>
+    <div class="producto">
+      <img src="https://cdn.pixabay.com/photo/2017/04/08/12/31/empanadas-2213617_640.jpg" alt="Mini Empanadas">
+      <h3>Mini Empanadas</h3>
+      <p>$3.000</p>
+    </div>
+    <div class="producto">
+      <img src="https://cdn.pixabay.com/photo/2017/05/07/08/56/fried-potatoes-2292546_640.jpg" alt="Mini Papas">
+      <h3>Mini Papas</h3>
+      <p>$2.500</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cangry Snack</p>
+  </footer>
+</body>
+</html>
