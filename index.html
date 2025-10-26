@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cangry Snacks 🍔 | Mini Snacks con onda</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#eef7ff;
+  --bg2:#fff6f9;
+  --accent:#ff7a5a;
+  --accent2:#7cc6ff;
+  --text:#082033;
+  --card:#ffffffcc;
+  --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(120deg,var(--bg1),var(--bg2));color:var(--text);line-height:1.6;scroll-behavior:smooth;overflow-x:hidden;}
+header{position:fixed;top:0;left:0;width:100%;padding:16px 24px;background:rgba(255,255,255,0.95);display:flex;justify-content:space-between;align-items:center;box-shadow:0 8px 20px rgba(0,0,0,0.05);z-index:100;backdrop-filter:blur(8px);border-radius:0 0 20px 20px;}
+header h1{font-size:26px;font-weight:800;position:relative;}
+.nav-links{display:flex;gap:12px;}
+.nav-links a{padding:6px 14px;border-radius:14px;background:linear-gradient(90deg,var(--accent2),#bfe8ff);color:#04385a;font-weight:700;transition:0.3s;text-decoration:none;}
+.nav-links a:hover{transform:scale(1.05);background:linear-gradient(90deg,var(--accent),#ffb497);}
+section{padding:120px 20px 60px;max-width:1100px;margin:auto;text-align:center;}
+h2,h3,h4{margin-bottom:14px;}
+h2{font-size:38px;color:#04385A;}
+h3{font-size:30px;color:#04385A;}
+p{margin-bottom:14px;}
+button{padding:14px 24px;border:none;border-radius:50px;background:var(--accent);color:white;font-weight:800;cursor:pointer;transition:0.3s;}
+button:hover{background:#ff8c6a;transform:scale(1.1);}
+button:active{transform:scale(0.95) rotate(-1deg);}
+.hero-card{background:var(--card);border-radius:var(--radius);padding:22px;min-width:250px;transition:transform 0.3s ease, box-shadow 0.3s ease;cursor:pointer;}
+.hero-card:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.25);}
+.carousel{display:flex;overflow-x:auto;gap:20px;padding:14px 0;scroll-behavior:smooth;}
+.carousel::-webkit-scrollbar{display:none;}
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+.gallery img{width:200px;height:140px;object-fit:cover;border-radius:var(--radius);cursor:pointer;transition:0.3s;}
+.gallery img:hover{transform:scale(1.05);}
+.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:flex;justify-content:center;align-items:center;opacity:0;pointer-events:none;transition:0.3s;}
+.lightbox img{max-width:90%;max-height:80%;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,0.3);}
+.lightbox.active{opacity:1;pointer-events:auto;}
+#sideMenu{position:fixed;top:0;left:-250px;width:250px;height:100%;background:var(--card);box-shadow:5px 0 25px rgba(0,0,0,0.2);transition:0.3s;z-index:99;padding:60px 20px;display:flex;flex-direction:column;gap:18px;border-radius:0 20px 20px 0;}
+#sideMenu a{text-decoration:none;color:var(--text);font-weight:700;padding:10px;border-radius:12px;transition:0.3s;background:linear-gradient(90deg,#fff6f988,#eef7ff88);}
+#sideMenu a:hover{background:linear-gradient(90deg,var(--accent2),#bfe8ff);}
+#menuBtn{position:fixed;top:20px;left:20px;background:var(--accent);color:white;border:none;border-radius:50px;padding:12px 18px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.2);z-index:102;transition:0.3s;}
+#menuBtn:hover{transform:scale(1.1);background:#ff8c6a;}
+#pedidoBtn{position:fixed;bottom:20px;right:20px;background:var(--accent);color:white;font-weight:800;border:none;border-radius:50px;padding:16px 24px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.2);transition:0.3s;}
+#pedidoBtn:hover{transform:scale(1.15);background:#ff8c6a;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cangry Snacks 🍔</h1>
+</header>
+
+<button id="menuBtn">&#9776;</button>
+<div id="sideMenu">
+  <a href="#catalogo">Catálogo</a>
+  <a href="#historia">Historia</a>
+  <a href="#galeria">Galería</a>
+  <a href="#contacto">Contacto</a>
+  <a href="https://www.instagram.com/cangry_snacks?igsh=MWNiemgybzJmMWJnZA==" target="_blank">Instagram</a>
+  <a href="https://www.tiktok.com/@cangry_snacks?_t=ZS-90Y7wStc1UD&_r=1" target="_blank">TikTok</a>
+</div>
+
+<section class="hero">
+  <h2>Antójate de lo bueno</h2>
+  <p>Mini hamburguesas, perritos, empanadas y papas rellenas. Perfectos para fiestas y eventos escolares.</p>
+  <button onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Ver Catálogo</button>
+</section>
+
+<section id="historia">
+  <h3>Nuestra Historia & Misión</h3>
+  <p><strong>Origen:</strong> Nació de la idea de vender a un buen precio un producto de alta calidad con buen sabor, tamaño ideal y diversión.</p>
+  <p><strong>Misión:</strong> Ofrecer nuestros snacks con calidad, sabor y creatividad, brindando a nuestros compañeros una experiencia divertida y deliciosa mientras aprendemos a emprender.</p>
+  <p><strong>Visión:</strong> Ser el emprendimiento más recordado de la feria, reconocido por innovación y entusiasmo, inspirando a futuros grados a crear con creatividad y trabajo en equipo.</p>
+  <p><strong>Por qué comprarnos:</strong> No es solo un alimento, sino una experiencia divertida, temática y accesible: ¡$2,500 o $3,000!</p>
+</section>
+
+<section id="catalogo">
+  <h3>Catálogo de Productos</h3>
+  <div class="carousel">
+    <div class="hero-card"><h4>Mini Hamburguesa</h4><p>Porción mini con sabor auténtico.</p><p><strong>$3,000 COP</strong></p></div>
+    <div class="hero-card"><h4>Mini Hamburguesa de color Azul</h4><p>La tradición en versión mini.</p><p><strong>$3,500 COP</strong></p></div>
+    <div class="hero-card"><h4>Mini Perros</h4><p>Crocantes y sabrosos.</p><p><strong>$2,000 COP</strong></p></div>
+  </div>
+</section>
+
+<section id="galeria">
+  <h3>Galería de Snacks</h3>
+  <div class="gallery">
+    <img src="https://i.pinimg.com/736x/2e/e1/48/2ee1483755c387fd63692bda6c9b18f0.jpg">
+    <img src="https://www.recetasnestlecam.com/sites/default/files/srh_recipes/354e709dabdd0745d06a5d40651487f6.png">
+    <img src="https://pbs.twimg.com/media/CGDYWhZWgAAVcDH.jpg">
+  </div>
+</section>
+
+<section id="contacto">
+  <h3>Contacto & Redes</h3>
+  <p>Escríbenos por DM para tu pedido o síguenos para novedades.</p>
+  <div style="display:flex;gap:12px;justify-content:center;">
+    <button onclick="window.open('https://www.instagram.com/cangry_snacks?igsh=MWNiemgybzJmMWJnZA==','_blank')">Instagram</button>
+    <button onclick="window.open('https://www.tiktok.com/@cangry_snacks?_t=ZS-90Y7wStc1UD&_r=1','_blank')">TikTok</button>
+  </div>
+</section>
+
+<footer>&copy; 2025 Cangry Snacks · Mini snacks con onda</footer>
+
+<button id="pedidoBtn" onclick="alert('¡Gracias! Escríbenos por Instagram o TikTok para pedir tu snack.')">Pedir Ahora</button>
+
+<script>
+// Toggle menú lateral
+const sideMenu=document.getElementById('sideMenu');
+const menuBtn=document.getElementById('menuBtn');
+menuBtn.onclick=()=>{sideMenu.style.left = sideMenu.style.left==='0px' ? '-250px' : '0px';}
+
+// Cerrar menú al seleccionar
+sideMenu.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click',()=>{sideMenu.style.left='-250px';});
+});
+
+// Lightbox simple
+const lightbox=document.createElement('div');
+lightbox.className='lightbox';document.body.appendChild(lightbox);
+document.querySelectorAll('.gallery img').forEach(img=>{
+  img.onclick=()=>{
+    lightbox.innerHTML=`<img src="${img.src}">`;
+    lightbox.classList.add('active');
+  }
+});
+lightbox.onclick=()=>lightbox.classList.remove('active');
+</script>
+
+</body>
+</html>
